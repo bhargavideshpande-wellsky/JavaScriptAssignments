@@ -41,47 +41,51 @@ function auto()
 
     var namesList = document.getElementsByTagName("li");
 
-    if(event.keyCode == 40)
+    if(event.keyCode == 40 && currentFocus < namesList.length - 1)
     {
-        if(currentFocus==null || currentFocus == namesList.length - 1)
+        if(currentFocus==null)
         {
             currentFocus = 0;
             namesList[currentFocus].setAttribute("class", "colorclass");
 
         }
         else
-         {
+        {
             namesList[currentFocus].setAttribute("class", "nocolorclass");
             currentFocus++;
             namesList[currentFocus].setAttribute("class", "colorclass");
+            console.log(currentFocus);
         }
+
         if(currentFocus>4)
         {
             document.getElementById("myList").scrollBy(0,18);
         }
 
     }
-    else if(event.keyCode == 38)
+    else if(event.keyCode == 40 && currentFocus == namesList.length - 1)
     {
-        if(currentFocus==0)
-        {
-            currentFocus=namesList.length;
-        }
-        if(currentFocus>0)
-        {
+        namesList[currentFocus].setAttribute("class", "colorclass");
+    }
+    if(event.keyCode == 38 && currentFocus > 0)
+    {
+
             currentFocus--;
             namesList[currentFocus].setAttribute("class", "colorclass");
-
             console.log(currentFocus);
-
-            //namesList[currentFocus++].setAttribute("class", "nocolorclass");
-        }
-        if(currentFocus>4)
+            // console.log(namesList.length-1);
+        if(currentFocus>=4)
         {
             document.getElementById("myList").scrollBy(0,-18);
         }
 
     }
+    else if(event.keyCode == 38 && currentFocus==0)
+        {
+            namesList[currentFocus].setAttribute("class", "colorclass");
+        }
+
+        else{}
 
     if(event.keyCode == 13)
     {
