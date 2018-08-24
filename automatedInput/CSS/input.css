@@ -1,0 +1,39 @@
+img{
+    margin-right: 8%;
+}
+li:hover{
+
+    background-color: grey;
+}
+#myInput{
+    width: 445px;
+    height: 25px;
+    margin-left: 6%;
+}
+#cross{
+    height: 29px;
+    width: 37px;
+}
+#myList{
+    width: 444px;
+    height: 90px;
+    overflow: auto;
+    padding: 0px;
+    margin: 0 auto;
+
+}
+.display{
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.democlass{
+    list-style-type: none;
+}
+.colorclass{
+    background-color: green;
+}
+.nocolorclass{
+    background-color: none;
+}
