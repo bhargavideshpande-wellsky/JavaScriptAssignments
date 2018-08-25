@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel ="stylesheet" type= "text/css" href="./CSS/FormCss.css">
+    <script src="./JavaScript/FormJs.js"></script>
+  </head>
+  <body>
+      <h3>FILL YOUR DETAILS</h3>
+      <div>
+            <form name="Myform" onsubmit="return Validation()" action="./Submission.html">
+                  <span>*</span>First name:<br>
+                  <input type="text" name="firstname" value="" onblur="firstName()">
+                  <p id ="msg1"></p>
+                  <br>
+                  <span>*</span>Last name:<br>
+                  <input type="text" name="lastname" value="" onblur="lastName()">
+                  <p id="msg2"></p>
+                  <br>
+                  <span>*</span>Phone Number:<br>
+                  <input type="text" name="phonenumber" value="" onblur="phone()">
+                  <p id ="msg3"></p>
+                  <br>
+                  <span>*</span>Email Id:<br>
+                  <input type="text" name="email" value="" onblur="emailID()">
+                  <p id ="msg4"></p>
+                  <br>
+                  <span>*</span>Address:<br>
+                  <textarea name="Address" rows= 5 cols = 10 value="" onblur="address()"></textarea>
+                  <p id = "msg5"></p>
+                  <br>
+                  City:<br>
+                  <input list="City" name="cities" id="txt">
+                  <datalist id="City">
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Banglore">Banglore</option>
+                  </datalist>
+                  <p></p>
+                  <br>
+                  <span>*</span>Gender:<br>
+                  <input type="radio" name="gender" id="male" onblur="gen()"> Male<br>
+                  <input type="radio" name="gender" id ="female" onblur="gen()"> Female<br>
+                  <p id ="msg6"></p>
+                  <input type="submit"  value="Submit">
+            </form>
+
+       </div>
+  </body>
+</html>
